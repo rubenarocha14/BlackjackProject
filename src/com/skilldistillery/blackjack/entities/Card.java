@@ -2,6 +2,13 @@ package com.skilldistillery.blackjack.entities;
 
 import java.util.Objects;
 
+/*
+ * 
+ * 
+ * HAS IMPLEMENTED EVERYTHING FROM UML
+ * 
+ */
+
 public class Card {
  private Suit suit;
  private Rank rank;
