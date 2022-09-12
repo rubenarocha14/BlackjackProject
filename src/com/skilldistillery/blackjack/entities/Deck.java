@@ -20,7 +20,8 @@ public class Deck {
 
 		}
 		
-		System.out.println("Done creating" + deck.size());
+		System.out.println("Deck created, lets play! " + deck.size() + " cards available. "
+				+ "\n-----------------------------------------------");
 	}
 	
 	public void printCards() {
@@ -31,7 +32,7 @@ public class Deck {
 	
 	public Card removeTopCard() {
 		Card dealtCard = deck.remove(0);
-		System.out.println("The dealt card is" + dealtCard);
+		//System.out.println("The dealt card is " + dealtCard);
 		return dealtCard;
 	}
 	
