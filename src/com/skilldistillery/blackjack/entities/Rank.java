@@ -17,11 +17,4 @@ public enum Rank {
 		return cardValue;
 	}
 
-
-
-//	@Override
-//	public String toString() {
-//		return "" + cardValue;
-//	}
-
 }

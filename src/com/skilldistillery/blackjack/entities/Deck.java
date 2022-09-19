@@ -23,15 +23,6 @@ public class Deck {
 
 	}
 
-	public int cardsLeftInDeck() {
-		int cardsLeft = deck.size();
-		return cardsLeft;
-	}
-
-	public Card dealCard() {
-		Card dealtCard = deck.remove(0);
-		return dealtCard;
-	}
 
 	public void dealCard(Hand hand) {
 		Card dealtCard = deck.remove(0);
@@ -40,11 +31,6 @@ public class Deck {
 
 	public void shuffle() {
 		Collections.shuffle(deck);
-	}
-
-	public Card removeTopCard() { // this is the same as dealCard change all instances to dealCard()
-		Card dealtCard = deck.remove(0);
-		return dealtCard;
 	}
 
 	public int checkDeckSize() {
