@@ -6,10 +6,40 @@ public class BlackjackHand extends Hand {
 	
 public BlackjackHand() {
 	cards = new ArrayList<Card>();
+}
+	
+
+public int getHandValue() {
+	int handValue = 0;
+	for (int i = 0; i<cards.size(); i++) {
+		handValue += cards.get(i).getValue();
+	}
+	return handValue;
 	
 }
 
-public int handSize() {
+public boolean isBlackjack() {
+	boolean blackjack = false;
+	int _21 = 21;
+	if(getHandValue() == _21) {
+		blackjack = true;
+	}
+	return blackjack;
+	
+}
+
+public boolean isBust() {
+	boolean bust = false;
+	int blackjack = 21;
+	if(getHandValue() > blackjack) {
+		bust = true;
+	}
+	return bust;
+	
+}
+
+
+public int getHandSize() {
 	return cards.size();
 }
 
@@ -18,24 +48,6 @@ public Card getCard(int idx) {
 	return cards.get(idx);
 }
 
-
-public void checkFor21() {
-
-	boolean twentyOne = false;
-	int goalNumber = 21;
-
-	if (getHandValue() == goalNumber) {
-		twentyOne = true;
-		System.out.println("21!");
-
-	}
-	else if (getHandValue() >= goalNumber) {
-		System.out.println("Bust!");
-	}
-	else {
-		System.out.println("Not 21!");
-	}
-}
 
 public int getCardValue() {
 	int cardValue = 0;
